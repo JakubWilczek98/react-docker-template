@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  react_app:
+    build: ./react_app
+    volumes:
+      - ./react_app:/app
+      - /react_app/node_modules
+    container_name: react_app
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
